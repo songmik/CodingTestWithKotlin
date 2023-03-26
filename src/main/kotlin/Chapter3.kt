@@ -1,5 +1,7 @@
 import java.io.BufferedReader
+import java.io.BufferedWriter
 import java.io.InputStreamReader
+import java.io.OutputStreamWriter
 
 // 2739. 구구단
 fun main_2739() {
@@ -67,10 +69,43 @@ fun main_25314() {
 }
 
 // 15552. 빠른 A+B
+fun main_15552() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    val bw = BufferedWriter(OutputStreamWriter(System.out))
+    val t = br.readLine()!!.toInt()
+
+    for (i in 1..t) {
+        val (a,b) = br.readLine().split(" ").map { it.toInt() }
+        bw.write("${a+b} \n")
+    }
+    bw.close()
+}
 
 // 11021. A+B-7
+fun main_11021() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    val bw = BufferedWriter(OutputStreamWriter(System.out))
+    val t = br.readLine()!!.toInt()
+
+    for (i in 1..t) {
+        val (a,b) = br.readLine().split(" ").map { it.toInt() }
+        bw.write("Case #$i: ${a+b}\n")
+    }
+    bw.close()
+}
 
 // 11022. A+B-8
+fun main_11022() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    val bw = BufferedWriter(OutputStreamWriter(System.out))
+    val t = br.readLine()!!.toInt()
+
+    for (i in 1..t) {
+        val (a,b) = br.readLine().split(" ").map { it.toInt() }
+        bw.write("Case #$i: $a + $b = ${a+b}\n")
+    }
+    bw.close()
+}
 
 // 2438. 별찍기 -1
 
