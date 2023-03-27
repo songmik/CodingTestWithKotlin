@@ -108,9 +108,53 @@ fun main_11022() {
 }
 
 // 2438. 별찍기 -1
+fun main_2438() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    val n = br.readLine()!!.toInt()
+
+    for(i in 1 .. n) {
+        for (j in 1..i) {
+            print("*")
+        }
+        println("")
+    }
+}
 
 // 2439. 별찍기 -2
+fun main_2439() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    val n = br.readLine()!!.toInt()
+
+    for(i in 1..n){
+        for (j in 1..n-i) {
+            print(" ")
+        }
+        for(k in 1..i) {
+            print("*")
+        }
+        println()
+    }
+}
 
 // 10952. A+B-5
+fun main_10952(){
+    val br = BufferedReader(InputStreamReader(System.`in`))
+
+    while (true) {
+        val (a,b) = br.readLine()!!.split(" ").map { it.toInt() }
+        if (a==0 && b==0 ) break
+        println(a+b)
+    }
+}
 
 // 10951. A+B-4
+fun main_10951() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
+
+    try {
+        while (true) {
+            val (a,b) = br.readLine()!!.split(" ").map { it.toInt() }
+            println(a+b)
+        }
+    } catch (_:Exception) {}
+}
