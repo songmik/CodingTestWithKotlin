@@ -2,7 +2,8 @@ import java.io.BufferedReader
 import java.io.BufferedWriter
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
-import java.util.StringTokenizer
+import java.util.*
+import kotlin.collections.ArrayList
 
 // 4. 1차원 배열
 
@@ -53,13 +54,62 @@ fun main_10871() {
 }
 
 // 10818. 최소, 최대
-fun main() {
+// TODO : 다시 풀기
 
-}
 
 // 2562. 최댓값
+fun main_2562() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    val arr = ArrayList<Int>()
+
+    repeat(9) {
+        arr.add(br.readLine().toInt())
+    }
+
+    println(arr.max())
+    println(arr.indexOf(arr.max()) + 1)
+}
 
 // 10810. 공 넣기
+fun main_10810() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    var st = StringTokenizer(br.readLine(), " ")
+    val n = st.nextToken().toInt()
+    val m = st.nextToken().toInt()
+    val arr = IntArray(n)
+
+    for(a in 1..m) {
+        st = StringTokenizer(br.readLine(), " ")
+        val i = st.nextToken().toInt()
+        val j = st.nextToken().toInt()
+        val k = st.nextToken().toInt()
+
+        for(b in i-1 until j) {
+            arr[b] = k
+        }
+    }
+
+    for(c in arr.indices) {
+        println("${arr[c]}")
+    }
+}
+
+fun main_10810_2() {
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    val (n,m) = br.readLine().split(" ").map { it.toInt() }
+    val arr = IntArray(n)
+
+    for(a in 1..m) {
+        val (i,j,k) = br.readLine().split(" ").map { it.toInt() }
+        for(b in i-1 until j) {
+            arr[b] = k
+        }
+    }
+
+    for(c in arr.indices) {
+        println("${arr[c]}")
+    }
+}
 
 // 10813. 공 바꾸기
 
